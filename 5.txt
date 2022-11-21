@@ -1,0 +1,16 @@
+from bs4 import BeautifulSoup
+import requests 
+URL = "webURL"
+data = requests.get(URL)
+soup = BeautifulSoup(data.text, "html.parser")
+imgs = soup.find_all('img') 
+txt = soup.find_all('p) 
+
+
+1. Crawling a website can be done using "bs4" and "requests".
+2. First we use "requests" library to fetch the website we are going to crawl.
+3. Then we use "BeautifulSoup" which is "bs4" using "html parser".
+4. With help of "BeautifulSoup" we can extract all tags "img". 
+5. Similarly, to extract the "Text" from the website we gonna use the tags like "p".
+
+
